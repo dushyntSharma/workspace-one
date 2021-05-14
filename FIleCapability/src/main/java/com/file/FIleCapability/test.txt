@@ -1,0 +1,3 @@
+bags,1,50
+cars,2,30
+vegetables,3,60
