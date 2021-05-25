@@ -8,7 +8,9 @@ public class ReplaceAndInsertion {
 		System.out.println("Enter the String");
 		String str = sc.nextLine();
 		String[] s = getStringArray(str);
-		System.out.println(s);
+		for (int i = 0; i < s.length; i++) {
+			System.out.println(s[i]);
+		}
 	}
 
 	private static String[] getStringArray(String str) {
