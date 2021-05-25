@@ -1,4 +1,4 @@
-package Array_String_Practice_questions;
+
 //Replace a space with given character;
 public class String_10
 {

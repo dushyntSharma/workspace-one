@@ -13,11 +13,19 @@ public class MySplitAndReverse {
 		for (int i = 0; i < stringArray.length; i++) {
 			System.out.println(stringArray[i]);
 		}
+//		System.out.println();
+//
+//		System.out.println("After swaping if they contain 2 or more vowels");
+//		String[] s = swapWords(stringArray);
+//		for (int i = 0; i < s.length; i++) {
+//			System.out.print(s[i] + " ");
+//
+//		}
 		System.out.println();
-
-		String[] s = swapWords(stringArray);
-		for (int i = 0; i < s.length; i++) {
-			System.out.print(s[i] + " ");
+		System.out.println("After swaping if there is 2 or more same character");
+		String[] s1 = replaceCharacter(stringArray);
+		for (int i = 0; i < s1.length; i++) {
+			System.out.print(s1[i] + " ");
 
 		}
 
@@ -38,6 +46,33 @@ public class MySplitAndReverse {
 			if (vowelCount > 1) {
 				swapedWord = swap(word);
 				stringArray[i] = swapedWord;
+			}
+
+		}
+
+		return stringArray;
+
+	}
+
+	private static String[] replaceCharacter(String[] stringArray) {
+
+		for (int i = 0; i < stringArray.length; i++) {
+
+			String swapedWord = null;
+			String word = stringArray[i];
+			for (int j = 0; j < word.length(); j++) {
+				char c = word.charAt(j);
+				int count = 0;
+				for (int j2 = 0; j2 < word.length(); j2++) {
+					if (c == word.charAt(j2)) {
+						count++;
+
+					}
+				}
+				if (count > 1) {
+					swapedWord = swap(word);
+					stringArray[i] = swapedWord;
+				}
 			}
 
 		}

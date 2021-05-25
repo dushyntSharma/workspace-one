@@ -1,4 +1,4 @@
-
+ 
 //Remove the character from the string
 import java.util.*;
 
